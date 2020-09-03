@@ -1,0 +1,5 @@
+all:
+	gcc -ggdb -pthread -std=gnu99 producer.c `pkg-config --cflags --libs gsl` -o producer
+	gcc -std=gnu99 consumer.c -o consumer
+clean:
+	rm rf *o producer consumer
